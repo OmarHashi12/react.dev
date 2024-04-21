@@ -14,18 +14,17 @@ function Board({ xIsNext, squares, onPlay }) {
       return;
     }
     const nextSquares = squares.slice();
-    if (xIsNext) {
-      nextSquares[i] = "X";
-    } else {
-      nextSquares[i] = "O";
-    }
+    nextSquares[i] = xIsNext ? "X" : "O";
     onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
+  const isFull = squares.every((square) => square !== null); // Check if all squares are filled
   let status;
   if (winner) {
     status = "Winner: " + winner;
+  } else if (isFull) {
+    status = "Draw. No winner."; // Display a draw message if no winner and board is full
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
