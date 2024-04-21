@@ -6,6 +6,9 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  /*Change #1 and #2*/
+  background-color: #f0f0f0; /* light gray background */
+  color: #000080; /* navy blue font color */
 }
 
 h1 {
@@ -57,7 +60,8 @@ body {
 }
 
 .square {
-  background: #fff;
+  /* Change #3*/
+  background: #e0e0e0; /* light gray hover background */
   border: 1px solid #999;
   float: left;
   font-size: 24px;
@@ -73,12 +77,15 @@ body {
 
 .board-row:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
 .status {
   margin-bottom: 10px;
+  /* Changes #4 & #5*/
+  font-style: italic; /* make text italic */
+  color: #007700; /* change font color to a shade of green */
 }
 .game {
   display: flex;
